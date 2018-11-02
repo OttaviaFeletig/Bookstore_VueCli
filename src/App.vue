@@ -1,10 +1,10 @@
 <template>
-   <div id="app" class="container d-flex flex-wrap justify-container-center">
+   <div id="app">
 
       <div v-if="isLoading">
         <p>Wait</p>
       </div>
-      <div v-else>
+      <div v-else class="container d-flex flex-wrap justify-container-center">
         <Books :books="books"/>
       </div>
   

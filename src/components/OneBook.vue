@@ -1,14 +1,15 @@
 <template>
-    <div class="one_book">
-        <div class="d-flex justify-content-start w-20">
-            <img class="img-fluid" :src=oneBook.cover alt="books-cover">
+    
+        <div class="one_book w-25 h-auto">
+            <div class="front">
+                <img class="img_dimension" :src=oneBook.cover alt="books-cover">
+            </div>
+            <div class="back">
+                <h3>{{oneBook.title}}</h3>
+                <p>{{oneBook.description}}</p>
+            </div> 
         </div>
-        <div class="back w-50">
-            <h2>{{oneBook.title}}</h2>
-            <p>{{oneBook.description}}</p>
-        </div>
-        
-    </div>
+    
 </template>
 
 <script>
@@ -20,6 +21,14 @@ export default {
 
 <style>
     .back{
-        text-align: justify;
+        text-align: justify;  
+    }
+    .img_dimension{
+        width: 100%;
+        height: auto; 
+    }
+    .one_book{
+        display: flex;
+        flex-wrap: wrap;
     }
 </style>
