@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="book_container">
     <OneBook 
       v-for="(book, index) in books"  
       :oneBook="book"

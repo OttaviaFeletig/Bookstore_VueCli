@@ -1,10 +1,5 @@
 <template>
-   <div id="app">
-  <!--   <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/> -->
+   <div id="app" class="container d-flex flex-wrap justify-container-center">
 
       <div v-if="isLoading">
         <p>Wait</p>
@@ -18,6 +13,7 @@
 </template>
 
 <script>
+
 import Books from '@/components/Books.vue'
 
   export default {
@@ -45,7 +41,7 @@ import Books from '@/components/Books.vue'
     },
     methods: {
       getFetch: function () {
-        fetch("https://api.myjson.com/bins/udbm5", {
+        fetch("https://api.myjson.com/bins/zyv02", {
             method: "GET"
           })
           .then(response => {
