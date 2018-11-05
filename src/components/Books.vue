@@ -1,5 +1,5 @@
 <template>
-  <div class="book_container d-flex flex-wrap ">
+  <div class="book_container d-flex flex-wrap" ontouchstart="this.classList.toggle('hover');">
     <OneBook 
       v-for="(book, index) in books"  
       :oneBook="book"
@@ -26,4 +26,12 @@ export default {
   } */
 }
 </script>
+
+<style>
+     .one_book:hover,
+     .one_book:hover {
+        transform: rotateY(180deg);
+}
+</style>
+
 

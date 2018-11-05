@@ -1,5 +1,5 @@
 {
-  "name": "bookstore_website",
+  "name": "vuecli_intro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,5 +17,15 @@
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
     "vue-template-compiler": "^2.5.17"
-  }
-}
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+ }

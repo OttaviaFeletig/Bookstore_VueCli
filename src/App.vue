@@ -1,11 +1,25 @@
 <template>
-   <div id="app">
+   <div id="app" class="container">
+
+        <div class="row">
+
+            <img class="col-2 h-100 logo" src="../book_icon.png" alt="logo">
+            
+            <h1 class="d-flex align-items-center mr-5 ml-3">Otta's Bookstore</h1>
+            
+            <div class="d-flex justify-content-end col align-items-center">
+
+                <input id="search_bar" v-model="search" class="form-control" type="text" placeholder="Search...">
+            
+            </div>
+            
+        </div>
 
       <div v-if="isLoading">
         <p>Wait</p>
       </div>
-      <div v-else class="container d-flex flex-wrap justify-container-center">
-        <Books :books="books"/>
+      <div v-else class="d-flex flex-wrap justify-container-center">
+        <Books :books="searchBar2"/>
       </div>
   
 
@@ -15,28 +29,38 @@
 <script>
 
 import Books from '@/components/Books.vue'
+import OneBook from '@/components/OneBook.vue'
+/* import SearchEngine from '@/components/SearchEngine.vue' */
 
   export default {
     name: "app",
     data() {
       return {
         books: [],
-        isLoading: true
+        isLoading: true,
+        search: ''
       }
     },
     components: {
-      Books
+      Books,
+      OneBook
+/*       SearchEngine */
     },
-/*     computed: {
-      isLoadingFetch() {
-        if(this.books.length == 0) {
-          return true
-        }else {
-          return false
-        }
-      }
-  }, */
-    created() {
+    computed: {
+        searchBar2(){
+         if(this.search == "") {
+           return this.books
+         } else {
+           console.log(this.search)
+           console.log(OneBook)
+           return this.books.filter(x => x.title.toUpperCase().includes(this.search.toUpperCase())
+           ||
+           x.description.toUpperCase().includes(this.search.toUpperCase()))
+         }
+          
+        } 
+    },
+     created() {
       this.getFetch()
     },
     methods: {
@@ -50,7 +74,8 @@ import Books from '@/components/Books.vue'
           .then(data => {
             this.books = data.books
             console.log(this.books)
-            this.isLoading = false});
+            this.isLoading = false})
+            .catch(error => alert(error));
       }
     }
   };
