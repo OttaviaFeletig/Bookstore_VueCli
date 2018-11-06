@@ -18,7 +18,7 @@
       <div v-if="isLoading">
         <p>Wait</p>
       </div>
-      <div v-else class="d-flex flex-wrap justify-container-center">
+      <div v-else class="d-flex flex-wrap justify-content-center">
         <Books :books="searchBar2"/>
       </div>
   
