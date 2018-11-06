@@ -18,7 +18,7 @@
         </div>
         </div>
           <Modal v-if="showModal" @close="showModal = false">
-              <h3 slot="header">custom header</h3>
+              
                     <img slot="body" :src=oneBook.detail alt="Detail" class="img_dimension">
                 </Modal>
         </div>
