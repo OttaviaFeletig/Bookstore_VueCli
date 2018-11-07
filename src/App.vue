@@ -1,5 +1,5 @@
 <template>
-   <div id="app" class="container">
+   <div id="app" class="container m-5">
 
         <div class="row">
 
@@ -18,7 +18,7 @@
       <div v-if="isLoading">
         <p>Wait</p>
       </div>
-      <div v-else class="d-flex flex-wrap justify-content-center">
+      <div v-else class="d-flex flex-wrap justify-content-center w-100 mt-5">
         <Books :books="searchBar2"/>
       </div>
   

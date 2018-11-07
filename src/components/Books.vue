@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-wrap">
+  <div class="d-flex flex-wrap w-100">
     <OneBook 
       v-for="(book, index) in books"  
       :oneBook="book"
