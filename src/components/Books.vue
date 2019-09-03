@@ -1,35 +1,26 @@
 <template>
-  <div class="d-flex flex-wrap w-100">
-    <OneBook 
-      v-for="(book, index) in books"  
-      :oneBook="book"
-      :key="index"/>
+  <div>
+    <div class="d-flex flex-wrap w-100 justify-content-center">
+      <OneBook v-for="(book, index) in books" :oneBook="book" :key="index" :allBooks="books" />
+    </div>
   </div>
 </template>
 
 <script>
-
-import OneBook from '@/components/OneBook.vue'
+import OneBook from "@/components/OneBook.vue";
+import Carousel from "@/components/Carousel.vue";
 export default {
-  name: 'books',
-  props: ['books'],
+  name: "books",
+  props: ["books"],
   components: {
-    OneBook
-  }
-/*   created() {
-    getBookList();
+    OneBook,
+    Carousel
   },
-  methods: {
-    getBookList: function() {
-      console.log(books)
-    }
-  } */
-}
+  methods: {}
+};
 </script>
 
 <style>
-    
-
 </style>
 
 
