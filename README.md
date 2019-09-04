@@ -1,26 +1,8 @@
-# bookstore_website
+A simple website displaying books cover and description.
 
-## Project setup
-```
-npm install
-```
+Download the folder.
+npm i to install the dependencies.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+npm run serve to run the project. 
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+npm run build to build the project.
