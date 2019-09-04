@@ -4,12 +4,10 @@
       <div v-for="(book, i) in allBooks" :key="i" v-if="i == index" class="carousel-item active">
         <img :src="book.detalle" class="d-block img_modal" alt="..." />
       </div>
-
       <div v-else class="carousel-item">
         <img :src="book.detalle" class="d-block img_modal" alt="..." />
       </div>
     </div>
-
     <a
       class="carousel-control-prev"
       href="#carouselExampleControls"

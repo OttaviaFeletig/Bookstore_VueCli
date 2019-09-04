@@ -14,7 +14,6 @@
     </div>
     <Modal v-if="showModal" @close="showModal = false">
       <Carousel slot="body" :img="oneBook.detalle" :allBooks="allBooks" :index="this.$vnode.key" />
-      <!-- <img slot="body" :src="oneBook.detalle" alt="Detail" class="img_modal" /> -->
     </Modal>
   </div>
 </template>
@@ -47,11 +46,6 @@ export default {
       this.prevBooks.push(
         this.allBooks.filter(oneBook => oneBook < currentBookIndex)
       );
-      // console.log(this.allBooks);
-      // this.booksArray = this.allBooks;
-      // this.booksArray.splice(currentBookIndex, 1);
-      // console.log(this.booksArray);
-      // // console.log(array);
       this.showModal = true;
     }
   }
